@@ -1,12 +1,11 @@
 
 from typing import List
-from collections import defaultdict, OrderedDict
 
 # https://leetcode.com/problems/find-players-with-zero-or-one-losses/editorial/
 # Tags: Hash Map
 class Solution:
     
-    # Runtime Complexity: O(n)
+    # Runtime Complexity: O(n log n)
     # Space Complexity: O(n)
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         lossesDict = {}
