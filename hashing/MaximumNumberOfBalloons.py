@@ -1,9 +1,8 @@
 
 from typing import List
-from collections import defaultdict
 
 # https://leetcode.com/problems/maximum-number-of-balloons/editorial/
-# Tags: 
+# Tags: Hash Map
 class Solution:
     
     # Runtime Complexity: O(n)
