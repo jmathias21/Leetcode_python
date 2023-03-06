@@ -6,22 +6,26 @@ from collections import defaultdict
 # Tags: Hash Map
 class Solution:
     
-    # Runtime Complexity: O(n)
-    # Space Complexity: O(n)
+    # Runtime Complexity: O(m)
+    # Space Complexity: O(1) - Never more than 26 characters
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        # if meagazing is smaller than the ransom note, it's not possible to construct
+        # the ransom note from the magazine
+        if (len(magazine) < len(ransomNote)):
+            return False
+
         d = defaultdict(int)
 
         for c in magazine:
             d[c] += 1
 
         for c in ransomNote:
+            d[c] -= 1
+
             if d[c] < 0:
                 return False
 
-        if sum(d.values()) <= 0:
-            return True
-        else:
-            return False
+        return True
 
             
 solution = Solution()
