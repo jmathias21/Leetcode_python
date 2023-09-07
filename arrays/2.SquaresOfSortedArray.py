@@ -6,6 +6,26 @@ class Solution:
     
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
+    # Set a left pointer at the beginning of the array and a right
+    # pointer at the end of the array. Then start at the end of the
+    # array and loop through to the beginning. At each step, compare
+    # the values at left and right pointers and add the squared absolute
+    # value of the smaller number to a new list and move the
+    # corresponding pointer forward
+    #
+    # Example: [-4,-1,0,3,10]
+    # [-4,-1,0,3,10]
+    #   ^         ^
+    # New arr: [0,0,0,0,100]
+    #
+    # [-4,-1,0,3,10]
+    #   ^      ^
+    # New arr: [0,0,0,16,100]
+    #
+    # [-4,-1,0,3,10]
+    #   ^    ^
+    # New arr: [0,0,9,16,100]
+    # etc...
     def sortedSquares(self, nums: List[int]) -> List[int]:
         n = len(nums)
         left = 0
@@ -26,5 +46,6 @@ class Solution:
 
 
 solution = Solution()
+answer = solution.sortedSquares([-10,-5,-4,-2])
 answer = solution.sortedSquares([-4,-1,0,3,10])
 print(answer)
