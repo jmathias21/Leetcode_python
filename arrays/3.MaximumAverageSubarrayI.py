@@ -15,13 +15,18 @@ class Solution:
         n = len(nums)
         s = 0
 
+        # sum the initial window
         for i in range(k):
             s += nums[i]
 
+        # get the max average from the initial sum
         maxAvg = s / k
 
         for i in range(k, n):
+            # tweak the sum based on the shifting of the window
+            # rather than re-summing the entire window
             s += nums[i] - nums[i - k]
+
             maxAvg = max(maxAvg, s / k)
 
         return maxAvg
