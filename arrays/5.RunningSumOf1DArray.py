@@ -6,11 +6,13 @@ class Solution:
     
     # Runtime Complexity: O(n)
     # Space Complexity: O(1)
+    #
+    # Loop through the set of numbers, summing them
+    # on each iteration and replacing the numbers in the
+    # list
     def runningSum(self, nums: List[int]) -> List[int]:
-        sum = 0
-        for i in range(len(nums)):
-            sum += nums[i]
-            nums[i] = sum
+        for i in range(1, len(nums)):
+            nums[i] = nums[i - 1] + nums[i]
 
         return nums
 
@@ -18,6 +20,12 @@ solution = Solution()
 answer = solution.runningSum([1,2,3,4])
 print(answer)
 
-# Input: nums = [1,2,3,4]
-# Output: [1,3,6,10]
-# Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
+# Example: [1,2,3,4]
+# [1,2,3,4]
+#  ^
+# [1,3,3,4]
+#    ^
+# [1,3,6,4]
+#      ^
+# [1,3,6,10]
+#        ^

@@ -12,15 +12,6 @@ class Solution:
     # the reamining flips we have left, and when we exceed our amount
     # we contract the window until we have no longer exceeded the amount
     # left
-    #
-    # Example: [0,0,1,0,0,1,1] k = 2
-    # [[0],0,1,0,0,1,1] remainingFlips = 1, maxOnes = 1
-    # [[0,0],1,0,0,1,1] remainingFlips = 0, maxOnes = 2
-    # [[0,0,1],0,0,1,1] remainingFlips = 0, maxOnes = 3
-    # [0,[0,1,0],0,1,1] remainingFlips = 0, maxOnes = 3
-    # [0,0,[1,0,0],1,1] remainingFlips = 0, maxOnes = 3
-    # [0,0,[1,0,0,1],1] remainingFlips = 0, maxOnes = 4
-    # [0,0,[1,0,0,1,1]] remainingFlips = 0, maxOnes = 5
     def longestOnes(self, nums: List[int], k: int) -> int:
         n = len(nums)
         maxOnes = 0
@@ -49,3 +40,12 @@ class Solution:
 solution = Solution()
 answer = solution.longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3)
 print(answer)
+
+# Example: [0,0,1,0,0,1,1] k = 2
+# [[0],0,1,0,0,1,1] remainingFlips = 1, maxOnes = 1
+# [[0,0],1,0,0,1,1] remainingFlips = 0, maxOnes = 2
+# [[0,0,1],0,0,1,1] remainingFlips = 0, maxOnes = 3
+# [0,[0,1,0],0,1,1] remainingFlips = 0, maxOnes = 3
+# [0,0,[1,0,0],1,1] remainingFlips = 0, maxOnes = 3
+# [0,0,[1,0,0,1],1] remainingFlips = 0, maxOnes = 4
+# [0,0,[1,0,0,1,1]] remainingFlips = 0, maxOnes = 5
