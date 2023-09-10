@@ -11,7 +11,18 @@ class Solution:
     # value, and then sees how close that value is to 1 to get our answer
     # after performing a single loop through nums
     def minStartValue(self, nums: List[int]) -> int:
-        
+        startVal = 1
+        stepSum = startVal + nums[0]
+        minimum = stepSum
+
+        for i in range(1, len(nums)):
+            stepSum += nums[i]
+            minimum = min(stepSum, minimum)
+            
+        if minimum < 1:
+            return startVal + (1 - minimum)
+        else:
+            return startVal
 
 
 solution = Solution()
