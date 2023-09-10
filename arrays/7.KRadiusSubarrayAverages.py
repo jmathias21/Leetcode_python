@@ -6,13 +6,29 @@ class Solution:
     
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
+    #
+    # Use a sliding window with prefix sum to find the averages
+    # for each element in the array, given a k radius.
     def getAverages(self, nums: List[int], k: int) -> List[int]:
             numLen = len(nums)
+
+            # if k is greater than the length of array of nums,
+            # then the array should only return -1's
             if (numLen - 1 < k):
                  return [-1] * numLen
 
+            # The window is i - k, i + k, and inclusive
+            # of i itself:
+            # [i - k, i, i + k]
             windowLen = (k * 2) + 1
+
+            # build an output that defaults to -1 so that they are
+            # automatically set. The first k elements and last k elements
+            # are always -1, so only the elements in-between will
+            # be a value other than -1
             output = [-1] * numLen
+
+            # sum the elements in the initial window
             currSum = 0
             for i in range(0, min(numLen, windowLen)):
                  currSum += nums[i]
@@ -21,7 +37,9 @@ class Solution:
             right = windowLen
             x = k + 1
 
-            if (right <= numLen):
+            # calculate the first known average in the output array,
+            # given that the window length is smaller than the array length.
+            if (windowLen <= numLen):
                 output[k] = int(currSum / windowLen)
 
             while (right < numLen):
