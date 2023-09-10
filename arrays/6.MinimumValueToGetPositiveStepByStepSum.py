@@ -7,42 +7,38 @@ class Solution:
     # Runtime Complexity: O(n)
     # Space Complexity: O(1)
     #
-    # This solution picks a startVal of 1, finds the minimum step by step
-    # value, and then sees how close that value is to 1 to get our answer
-    # after performing a single loop through nums
+    # Loop through each number, and find the minimum
+    # sum from all iterations. We can simply take this
+    # number and subtract it from 1 to get the minimum
+    # positive startVal such that the step by step sum
+    # is never less than 1
     def minStartValue(self, nums: List[int]) -> int:
-        startVal = 1
-        stepSum = startVal + nums[0]
-        minimum = stepSum
+        stepSum = 0
+        minimum = 0
 
-        for i in range(1, len(nums)):
+        for i in range(0, len(nums)):
             stepSum += nums[i]
-            minimum = min(stepSum, minimum)
-            
-        if minimum < 1:
-            return startVal + (1 - minimum)
-        else:
-            return startVal
+            minimum = min(minimum, stepSum)
+
+        return 1 - minimum
 
 
 solution = Solution()
 answer = solution.minStartValue([-3,2,-3,4,2])
 print(answer)
 
-# Input: nums = [-3,2,-3,4,2]
-# Output: 5
-# Explanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.
-# step by step sum
-# startValue = 4 | startValue = 5 | nums
-#   (4 -3 ) = 1  | (5 -3 ) = 2    |  -3
-#   (1 +2 ) = 3  | (2 +2 ) = 4    |   2
-#   (3 -3 ) = 0  | (4 -3 ) = 1    |  -3
-#   (0 +4 ) = 4  | (1 +4 ) = 5    |   4
-#   (4 +2 ) = 6  | (5 +2 ) = 7    |   2
-
-# Input: nums = [1,-2,-3]
-# Output: 5
-# startValue = 4 | startValue = 5 | nums
-#   (4 +1 ) = 5  | (5 +3 ) = 6    |  1
-#   (5 -2 ) = 3  | (6 -2 ) = 4    |  -2
-#   (3 -3 ) = 0  | (4 -3 ) = 1    |  -3
+# Example: [-3,2,-3,4,2]
+# startVal = 0, stepSum = 0, minimum = 0
+#
+# (0  + -3) = -3
+# (-3 +  2) = -1
+# (-1 + -3) = -4
+# (-4 +  4) =  0
+# (0  +  2) =  2
+#
+# minimum = -4
+# startVal = 0
+#
+# minimum positive value = 1 - minimum
+#   = 1 - (-4)
+#   = 5
