@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-# Tags: Dynamic Programming
+# Tags: dynamic programming
 class Solution:
 
     # Runtime Complexity: O(n)
