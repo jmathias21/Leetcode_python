@@ -9,8 +9,8 @@ class ListNode:
 # Tags: linked list
 class Solution:
 
-    # Runtime Complexity: 
-    # Space Complexity: 
+    # Runtime Complexity: O(n + m)
+    # Space Complexity: O(1)
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         # create a pointer variable and a head variable that are both pointing
         # at a disconnected node
