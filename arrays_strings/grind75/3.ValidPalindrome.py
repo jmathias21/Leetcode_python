@@ -10,7 +10,7 @@ class Solution:
     #
     # Loop up to halfway through the string and compare the beginning and ending
     # to each other and make sure they're the same. We can skip the last character
-    # if the stirng length is odd because we'd be comparing the same character to
+    # if the string length is odd because we'd be comparing the same character to
     # itself
     def isPalindrome(self, s: str) -> bool:
         # remove non-alphanumeric characters and lowercase the string
