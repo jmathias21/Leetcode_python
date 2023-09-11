@@ -1,5 +1,3 @@
-from typing import List
-
 # https://leetcode.com/problems/valid-parentheses/
 # Tags: stacks
 class Solution:
