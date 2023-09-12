@@ -30,7 +30,7 @@ class Solution:
 
         
 solution = Solution()
-#answer = solution.lowestCommonAncestor(TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4)), TreeNode(2), TreeNode(3))
+answer = solution.lowestCommonAncestor(TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4)), TreeNode(2), TreeNode(3))
 answer = solution.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(4))
-#answer = solution.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(7))
+answer = solution.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(7))
 print(answer)
