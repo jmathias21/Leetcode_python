@@ -1,4 +1,3 @@
-from typing import List
 import re
 
 # https://leetcode.com/problems/valid-palindrome/
