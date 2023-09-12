@@ -5,7 +5,7 @@ class TreeNode:
         self.right = right
 
 # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-# Tags: 
+# Tags: BST, Binary Search Tree, LCD, DFS
 class Solution:
 
     # Runtime Complexity: O(n)
