@@ -19,7 +19,7 @@ class Solution:
     # Note: If the current node is equal to p or q, then we know it must
     # be the LCD, because a node can be a descendant of itself, and we
     # know its the lowest node that has both p and q as descendants.
-    def lowestCommonAncestor(self, root, p, q):
+    def lowestCommonAncestorRecursive(self, root, p, q):
         if p.val < root.val and q.val < root.val:
             return self.lowestCommonAncestor(root.left, p, q)
         elif p.val > root.val and q.val > root.val:
@@ -27,10 +27,21 @@ class Solution:
         else:
             return root
         
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
+    def lowestCommonAncestorIterative(self, root, p, q):
+        while (True):
+            if p.val < root.val and q.val < root.val:
+                root = root.left
+            elif p.val > root.val and q.val > root.val:
+                root = root.right
+            else:
+                return root
+        
 
         
 solution = Solution()
-answer = solution.lowestCommonAncestor(TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4)), TreeNode(2), TreeNode(3))
-answer = solution.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(4))
-answer = solution.lowestCommonAncestor(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(7))
+answer = solution.lowestCommonAncestorRecursive(TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4)), TreeNode(2), TreeNode(3))
+answer = solution.lowestCommonAncestorIterative(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(4))
+answer = solution.lowestCommonAncestorRecursive(TreeNode(6, TreeNode(2, TreeNode(0), TreeNode(4)), TreeNode(8, TreeNode(7), TreeNode(9))), TreeNode(2), TreeNode(7))
 print(answer)
