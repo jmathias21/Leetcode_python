@@ -3,8 +3,8 @@ from collections import defaultdict
 # https://leetcode.com/problems/ransom-note/
 # Tags: hashmap
 class Solution:
-    # Runtime Complexity: 
-    # Space Complexity: 
+    # Runtime Complexity: O(m)
+    # Space Complexity: O(1)
     # Time: 8:00
     #
     # Counts number of each character used in magazine string using a hashmap.
