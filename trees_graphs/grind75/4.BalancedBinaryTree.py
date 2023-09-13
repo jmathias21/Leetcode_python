@@ -6,12 +6,12 @@ class TreeNode:
         self.left = left
         self.right = right
 
-# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-# Tags: BST, Binary Tree, DFS
+# https://leetcode.com/problems/balanced-binary-tree/
+# Tags: BST, Binary Tree, DFS, recursion
 class Solution:
 
     # Runtime Complexity: O(n)
-    # Space Complexity: O(h) where h is the tree height
+    # Space Complexity: O(n)
     #
     # Recurse through the tree with DFS using a post-order recursive
     # function. As we visit each node, return the maximum amount of depth
