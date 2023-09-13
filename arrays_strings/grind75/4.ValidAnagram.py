@@ -5,7 +5,7 @@ from collections import defaultdict
 class Solution:
 
     # Runtime Complexity: O(n)
-    # Space Complexity: O()
+    # Space Complexity: O(1)
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
