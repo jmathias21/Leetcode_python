@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 # https://leetcode.com/problems/ransom-note/
-# Tags: hashmap
+# Tags: Hash Map
 class Solution:
     # Runtime Complexity: O(m)
     # Space Complexity: O(1)

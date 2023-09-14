@@ -10,8 +10,8 @@ class TreeNode:
 # Tags: DFS, binary tree, depth
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
     # Time: 1:30
     #
     # When recursing back up the tree we return the max depth
