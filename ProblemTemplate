@@ -1,0 +1,13 @@
+# 
+# Tags: 
+class Solution:
+
+    # Runtime Complexity: O()
+    # Space Complexity: O()
+    # Time: 
+    def functionName(self, ) -> int:
+
+        
+solution = Solution()
+answer = solution.functionName()
+print(answer)
