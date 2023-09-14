@@ -8,7 +8,7 @@ class Solution:
     # Time: 8:00
     #
     # Counts number of each character used in magazine string using a hashmap.
-    # Then subtracts the amount ogf times each character used in the ransom note.
+    # Then subtracts the amount of times each character used in the ransom note.
     # If we find that none of the characters in the hashmap were subtracted more
     # than they were added, then we know we can construct the ransom note from the
     # magazine
