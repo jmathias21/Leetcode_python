@@ -6,7 +6,7 @@ class ListNode:
         self.next = None
     
 # https://leetcode.com/problems/linked-list-cycle/
-# Tags: Floyds Cycle, Hashset, Linked List
+# Tags: Floyds Cycle, Hashset, Linked List, Fast/Slow Pointer
 class Solution:
 
     # Runtime Complexity: O(n)
