@@ -1,9 +1,9 @@
 # https://leetcode.com/problems/number-of-1-bits/
-# Tags: 
+# Tags: bit manipulation, hamming weight, Bitwise AND, Right Shift
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(1)
+    # Space Complexity: O(1)
     # Time: 45:00
     #
     # For each loop iteration, we check to see if the last bit is a 1
