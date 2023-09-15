@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/longest-common-prefix/
-# Tags: 
+# Tags: Lexicographic sort, vertical scanning
 class Solution:
 
     # Runtime Complexity: O(n)
@@ -40,7 +40,7 @@ class Solution:
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
     # Time: Not timed
-    def longestCommonPrefix2(self, strs: List[str]) -> str:
+    def longestCommonPrefixUsingSort(self, strs: List[str]) -> str:
         if len(strs) == 1:
             return strs[0]
 
