@@ -4,8 +4,8 @@ from typing import List
 # Tags: Summation, XOR, bitwise manipulation
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(1)
     # Time: 15:00
     #
     # Sum all of the expected numbers together as well as the actual numbers.
@@ -23,8 +23,8 @@ class Solution:
 
         return expected - actual
     
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(1)
     # Time: Not timed
     #
     # 1. We start with a number, which is the length of the list.
