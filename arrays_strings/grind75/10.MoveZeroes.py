@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/move-zeroes/
-# Tags: 
+# Tags: Two pointers, slow and fast pointers
 class Solution:
 
     # Runtime Complexity: O(n)
@@ -29,8 +29,8 @@ class Solution:
         return nums
         
 solution = Solution()
-#answer = solution.moveZeroes([1, 0])
-#answer = solution.moveZeroes([1])
+answer = solution.moveZeroes([1, 0])
+answer = solution.moveZeroes([1])
 answer = solution.moveZeroes([0, 1, 0, 3, 12])
 print(answer)
 
