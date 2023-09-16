@@ -4,7 +4,7 @@ from typing import List
 # Tags: 
 class Solution:
 
-    # Runtime Complexity: O(n ^ 2)
+    # Runtime Complexity: O(n)
     # Space Complexity: O(1)
     # Time: 11:00
     #
