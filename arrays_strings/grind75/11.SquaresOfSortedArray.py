@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/squares-of-a-sorted-array/editorial/
-# Tags: Two Pointers
+# Tags: Two Pointers, backwards for-loop
 class Solution:
     
     # Runtime Complexity: O(n)
