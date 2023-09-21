@@ -6,7 +6,7 @@ class Solution:
 
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSumUsingHashMap(self, nums: List[int], target: int) -> List[int]:
         hashMap = {}
 
         for i, num in enumerate(nums):
