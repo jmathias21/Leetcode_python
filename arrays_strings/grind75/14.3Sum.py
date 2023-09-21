@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/3sum/
-# Tags: 
+# Tags: two pointers, two sum, 
 class Solution:
 
     # Runtime Complexity: O(n^2)
@@ -60,10 +60,37 @@ class Solution:
 
         return answer
 
+    # Runtime Complexity: O(n^2)
+    # Space Complexity: O(n)
+    # Time: Not timed
+    def threeSumUsingHashMap(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        answer = []
 
+        for i in range(len(nums)):
+            if nums[i] > 0:
+                break
+
+            if i != 0 and nums[i] == nums[i - 1]:
+                continue
+
+            hashMap = {}
+
+            j = i + 1
+            while j < len(nums):
+                if nums[j] in hashMap:
+                    answer.append([nums[i], nums[hashMap[nums[j]]], nums[j]])
+                    while j + 1 < len(nums) and nums[j] == nums[j + 1]:
+                        j += 1
+
+                hashMap[-nums[i] - nums[j]] = j
+                j += 1
+
+        return answer
         
 solution = Solution()
-answer = solution.threeSum([-1,0,1,2,-1,-4])
+#answer = solution.threeSumUsingHashMap([0,0,0])
+answer = solution.threeSumUsingHashMap([-1,0,1,2,-1,-4])
 answer = solution.threeSum([-4,-3,-2,-1,0,1,2,3,4])
 print(answer)
 
