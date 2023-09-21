@@ -74,16 +74,18 @@ class Solution:
             if i != 0 and nums[i] == nums[i - 1]:
                 continue
 
-            hashMap = {}
+            seen = set()
 
             j = i + 1
+
             while j < len(nums):
-                if nums[j] in hashMap:
-                    answer.append([nums[i], nums[hashMap[nums[j]]], nums[j]])
+                complement = -nums[i] - nums[j]
+                if complement in seen:
+                    answer.append([nums[i], nums[j], complement])
                     while j + 1 < len(nums) and nums[j] == nums[j + 1]:
                         j += 1
 
-                hashMap[-nums[i] - nums[j]] = j
+                seen.add(nums[j])
                 j += 1
 
         return answer
