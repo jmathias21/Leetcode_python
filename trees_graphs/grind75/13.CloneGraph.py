@@ -7,7 +7,7 @@ class Node:
         self.neighbors = neighbors if neighbors is not None else []
 
 # https://leetcode.com/problems/clone-graph/
-# Tags: 
+# Tags: BFS, connected graph, undirected graph
 class Solution:
 
     # Runtime Complexity: O(n)
