@@ -2,7 +2,7 @@ from typing import List
 from collections import deque
 
 # https://leetcode.com/problems/course-schedule/
-# Tags: Kahns algorithm for topological sorting, cyclical graph
+# Tags: Kahns algorithm for topological sorting, cyclical graph, DFS, post-order traversal
 class Solution:
 
     # Runtime Complexity: O(m + n) where n is the # of courses and m is the # of edges (pre-reqs)
@@ -46,17 +46,78 @@ class Solution:
 
         return nodesVisited == numCourses
     
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        
+    # Runtime Complexity: O(m + n) where n is the # of courses and m is the # of edges (pre-reqs)
+    # Space Complexity: O(m + n)
+    # Time: Not timed
+    #
+    # This solution demonstrates a DFS post-order traversal of a directed graph using an
+    # iterative approach rather than a recursive approach. We build up an array of which
+    # needs have been seen in the current stack, and we use that to see if we trip over
+    # the same node twice in that stack. If we do, we know there's a cycle
+    def canFinishUsingDFS(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        visited = [False] * numCourses
+        inStack = [False] * numCourses
+
+        adj = [[] for _ in range(numCourses)]
+        for prerequisite in prerequisites:
+            adj[prerequisite[1]].append(prerequisite[0])
+
+        # loop through every single course (node) to make sure that we've visited
+        # every node in our DFS
+        for course in range(numCourses):
+            if visited[course]:
+                continue
+            
+            stack = [course]
+            while stack:
+                # peek the top of the stack. We don't pop it yet because we want to
+                # use our stack to perform a post-order traversal. This means we don't
+                # actually process the node until all of it's neighbors have been processed
+                node = stack[-1]
+
+                # if the current node has already been seen in the current stack, we
+                # know this graph has a cycle
+                if inStack[node]:
+                    return False
+                
+                # if we visit a node that we've seen before, we can pop it off the stack
+                # so it never gets processed again
+                if visited[node]:
+                    stack.pop()
+                    continue
+
+                visited[node] = True
+                inStack[node] = True
+
+                hasUnvisitedNeighbor = False
+
+                for neighbor in adj[node]:
+                    if not visited[neighbor]:
+                        stack.append(neighbor)
+
+                        # these two lines make sure we process this neighbor before we process
+                        # the next neighbors. It helps turn this from a BFS into a DFS
+                        hasUnvisitedNeighbor = True
+                        break
+
+                if not hasUnvisitedNeighbor:
+                    # if all neighbors have been visited, we can process the current node since
+                    # this is a post-order traversal. For this node, we want to indicate that
+                    # its no longer in the stack
+                    inStack[node] = False
+                    stack.pop()
+
+        return True
+
 
         
 solution = Solution()
-answer = solution.canFinishUsingKahnsAlg(5, [[1,4],[2,4],[3,1],[3,2]])
-answer = solution.canFinish(5, [[4, 5], [5, 0], [4, 1], [7, 9]])
+answer = solution.canFinishUsingDFS(5, [[1,4],[2,4],[3,1],[3,2]])
+#answer = solution.canFinish(5, [[4, 5], [5, 0], [4, 1], [7, 9]])
 print(answer)
 
 
-# Example: prerequisites = [[1,4],[2,4],[3,1],[3,2]], numCourses = 5
+# Example for canFinishUsingKahnsAlg: prerequisites = [[1,4],[2,4],[3,1],[3,2]], numCourses = 5
 
 #  1 <- 4
 #  v    v
@@ -86,3 +147,14 @@ print(answer)
 
 # Return the total nodes visited (total nodes popped off queue) = 5
 # total nodes visited (5) == numCourses (5) = True
+
+#-----------------------------------------------------------------------------------------
+
+# Example for canFinishUsingDFS: prerequisites = [[1,4],[2,4],[3,1],[3,2]], numCourses = 5
+
+#  1 <- 4
+#  v    v
+#  3 <- 2
+# This diagram shows pre-requisite courses pointing at courses that depend on them
+
+#
