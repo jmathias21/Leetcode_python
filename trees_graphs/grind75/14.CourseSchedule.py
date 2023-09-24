@@ -78,7 +78,7 @@ class Solution:
     def isCycleRec(self, node, adj, visited, inStack):
         # if we've seen this node before inside of the current stack,
         # then there's a cycle. This must be checked before we've checked
-        # whether w've visted this node before
+        # whether we've visted this node before
         if inStack[node]:
             return True
 
