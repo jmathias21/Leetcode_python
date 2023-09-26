@@ -55,3 +55,36 @@ answer = solution.orangesRotting([[1,2]])
 answer = solution.orangesRotting([[2,1,1],[0,1,1],[1,0,1]])
 answer = solution.orangesRotting([[2,1,1],[1,1,0],[0,1,1]])
 print(answer)
+
+# Example: 
+# [2,1,1]
+# [0,1,1]
+# [1,0,1]
+# max_depth = 0
+# fresh_count = 6
+
+# [2,2,1]
+# [0,1,1]
+# [1,0,1]
+# max_depth = 1
+# fresh_count = 5
+
+# [2,2,2]
+# [0,2,1]
+# [1,0,1]
+# max_depth = 2
+# fresh_count = 3
+
+# [2,2,2]
+# [0,2,2]
+# [1,0,1]
+# max_depth = 3
+# fresh_count = 2
+
+# [2,2,2]
+# [0,2,2]
+# [1,0,2]
+# max_depth = 4
+# fresh_count = 1
+
+# return -1 because fresh_count > 0
