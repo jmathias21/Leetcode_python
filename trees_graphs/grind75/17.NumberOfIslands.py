@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/number-of-islands/
-# Tags: BFS, matrix, graph
+# Tags: DFS, matrix, graph
 class Solution:
 
     # Runtime Complexity: O()
@@ -9,11 +9,11 @@ class Solution:
     # Time: 33:00
     #
     # This solution loops through the grid until it finds an island element that
-    # haven't visited yet, and then performs a BFS recursive search for connected island
+    # haven't visited yet, and then performs a DFS recursive search for connected island
     # elements until we find the entire island and add it to our visited elements. Then
     # continue our primary loop until we find another unvisited island element, until we
     # find all of the islands
-    def numIslands(self, grid: List[List[str]]) -> int:
+    def numIslandsUsingDFS(self, grid: List[List[str]]) -> int:
         # keep track of island count
         island_count = 0
         visited = [[False for _ in row] for row in grid]
