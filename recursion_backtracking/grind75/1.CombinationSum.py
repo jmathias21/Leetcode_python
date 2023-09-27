@@ -2,7 +2,7 @@ from typing import List
 
 # https://leetcode.com/problems/combination-sum/
 # Resources: https://www.youtube.com/watch?v=GBKI9VSKdGg
-# Tags: backtracking, dynamic programming, DFS
+# Tags: backtracking, dynamic programming, DFS, recursion
 class Solution:
 
     # Runtime Complexity: O(N^(T/M + 1)) where N is the total number of candidates, M is the minimum
