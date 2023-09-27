@@ -4,11 +4,11 @@ from typing import List
 # Tags: backtracking, DFS, recursion
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n * n!)
+    # Space Complexity: O(n)
     # Time: started 2:45
     # 
-    # Uses DFS recursive backtracking to traverse a "tree" of potential premutations
+    # Uses DFS recursive backtracking to traverse a "tree" of potential permutations
     def permute(self, nums: List[int]) -> List[List[int]]:
         answer = []
 
