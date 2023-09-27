@@ -1,12 +1,17 @@
 from typing import List
 
 # https://leetcode.com/problems/combination-sum/
+# Resources: https://www.youtube.com/watch?v=GBKI9VSKdGg
 # Tags: backtracking, dynamic programming, DFS
 class Solution:
 
-    # Runtime Complexity: O(2^n)
-    # Space Complexity: O(t)
+    # Runtime Complexity: O(N^(T/M + 1)) where N is the total number of candidates, M is the minimum
+    # candidate value, and T is the target
+    # Space Complexity: O(T/M)
     # Time: Not timed
+    #
+    # Uses DFS recursive backtracking to incrementally build candidates to the solution
+    # while dropping candidates that we don't want to retry
     def combinationSumUsingBacktrackingRec(self, candidates, target):
         answer = []
 
@@ -26,8 +31,9 @@ class Solution:
         return answer
         
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(N * T * K) where N is the number of candidates, T is the target, and K is the maximum
+    # number of occurrences of a candidate in a combination sum
+    # Space Complexity: O(N * T)
     # Time: Not timed
     #
     # Uses dynamic programming. With each candidate, start with a target of 0, then 1, etc..
