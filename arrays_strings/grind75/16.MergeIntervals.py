@@ -4,8 +4,8 @@ from typing import List
 # Tags: intersecting intervals
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
     # Time: 30:00
     #
     # Sort intervals by the first interval value, then iteratively add them to
