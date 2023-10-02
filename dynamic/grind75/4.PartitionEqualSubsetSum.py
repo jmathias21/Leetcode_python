@@ -76,13 +76,9 @@ class Solution:
         
 solution = Solution()
 answer = solution.canPartitionUsingDPAnd1DArray([2,3,1,4])
-# answer = solution.canPartition([1,3,4,4])
-# answer = solution.canPartition([1,5,11,5])
+answer = solution.canPartition([1,3,4,4])
+answer = solution.canPartition([1,5,11,5])
 print(answer)
-
-# Given an integer array nums, return true if you can partition the array into two subsets such that
-# the sum of the elements in both subsets is equal or false otherwise.
-
  
 # Example for canPartitionUsingDPAnd1DArray: [2,3,1,4]
 # target = sum(nums) / 2 = 5
