@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 # https://leetcode.com/problems/longest-palindrome/
-# Tags: 
+# Tags: Hash map
 class Solution:
 
     # Runtime Complexity: O(n)

@@ -4,6 +4,16 @@ import heapq
 # https://leetcode.com/problems/k-closest-points-to-origin/
 # Tags: heap implementation, heap, euclidian distance
 class Solution:
+
+    # Runtime Complexity: O(n log n) where n is the length of points
+    # Space Complexity: O(n)
+    # Time: Not timed
+    #
+    # for each point, calcuklate the euclidian distance, sort them, and return k
+    # results
+    def kClosestUsingSort(self, points: List[List[int]], k: int) -> List[List[int]]:
+        points.sort(key = lambda p: (p[0] * p[0]) + (p[1] * p[1]))
+        return points[:k]
     
     # Runtime Complexity: O(n log k) where n are the points and k is the heap size
     # Space Complexity: O(k)
@@ -33,16 +43,6 @@ class Solution:
         # loop through the heap and build an array of [x,y] values from
         # what's left
         return [(x, y) for (dist, x, y) in heap]
-    
-    # Runtime Complexity: O(n log n) where n is the length of points
-    # Space Complexity: O(n)
-    # Time: Not timed
-    #
-    # for each point, calcuklate the euclidian distance, sort them, and return k
-    # results
-    def kClosestUsingSort(self, points: List[List[int]], k: int) -> List[List[int]]:
-        points.sort(key = lambda p: (p[0] * p[0]) + (p[1] * p[1]))
-        return points[:k]
 
 
     # Runtime Complexity: O()

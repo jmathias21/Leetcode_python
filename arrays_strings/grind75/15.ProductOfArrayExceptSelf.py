@@ -7,7 +7,7 @@ class Solution:
 
     # Runtime Complexity: O(n)
     # Space Complexity: O(1)
-    # Time: 
+    # Time: Not timed
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         length = len(nums)
         output = [1] * length

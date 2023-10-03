@@ -3,7 +3,7 @@
 class Solution:
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
-    # Time: Not Measured
+    # Time: Not timed
     #
     # Climbing stairs represents a fibonacci problem because the 
     # sum of n = 1 and n = 2 can be used to calculate n = 3. Fibonacci's sequence
