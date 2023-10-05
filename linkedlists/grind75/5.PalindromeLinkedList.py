@@ -55,6 +55,7 @@ class Solution:
 
         
 solution = Solution()
+answer = solution.isPalindrome(ListNode(1, ListNode(0)))
 answer = solution.isPalindrome(ListNode(1))
 answer = solution.isPalindrome(ListNode(1, ListNode(2, ListNode(1))))
 answer = solution.isPalindrome(ListNode(1, ListNode(1)))

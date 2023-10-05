@@ -8,7 +8,7 @@ class Solution:
     # Space Complexity: O(m)
     # Time: Not timed
     #
-    # Uses a simplified version of a dyanmic programming 0/1 knapsack solution. We use a hash set that
+    # Uses a simplified version of a dynamic programming 0/1 knapsack solution. We use a hash set that
     # tracks all calculated sums, and on each iteration we add the current number to each of the sums
     # in the hash set and add those numbers to the hash set. e.g. if the current number is 3 and
     # the hash set contains [0,2], we add 0 + 3 and 2 + 3 back to the hash set, so it now contains

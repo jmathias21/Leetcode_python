@@ -24,9 +24,9 @@ class Solution:
 
         
 solution = Solution()
+answer = solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
 answer = solution.maxSubArray([1])
 answer = solution.maxSubArray([-2, 1])
-answer = solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
 answer = solution.maxSubArray([-1, 2, 3, -2, 6])
 print(answer)
 
