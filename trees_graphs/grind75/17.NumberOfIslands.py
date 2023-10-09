@@ -4,8 +4,8 @@ from typing import List
 # Tags: DFS, matrix, graph
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(m * n)
+    # Space Complexity: O(m * n)
     # Time: 33:00
     #
     # This solution loops through the grid until it finds an island element that
