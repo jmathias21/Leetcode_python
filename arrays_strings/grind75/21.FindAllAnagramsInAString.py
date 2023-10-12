@@ -8,6 +8,10 @@ class Solution:
     # Runtime Complexity: O(n)
     # Space Complexity: O(1) at most 26 characters
     # Time: Not timed
+    #
+    # Use a sliding window to compare the current s chars with the p chars. To compare them
+    # we use two dictionaries (for s and p). As the windows slides, we update the count for
+    # the s dictionary
     def findAnagrams(self, s: str, p: str) -> List[int]:
         s_len = len(s)
         p_len = len(p)
