@@ -5,8 +5,8 @@ from typing import List
 # Tags: Greedy
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(1)
     # Time: Not timed
     #
     # Get frequencies of each letter. Calculate how many idle times there would
