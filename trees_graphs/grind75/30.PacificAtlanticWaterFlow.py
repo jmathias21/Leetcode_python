@@ -1,5 +1,4 @@
 from typing import List
-from collections import deque
 
 # https://leetcode.com/problems/pacific-atlantic-water-flow/
 # Tags: Intersection of two sets, DFS, 
@@ -16,32 +15,35 @@ class Solution:
     # that represent all coordinates that can reach the pacific or the atlantic. Return the intersection of
     # both to get our answer
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
-        width = len(heights[0])
-        height = len(heights)
-        pacific_reachable = set()
-        atlantic_reachable = set()
+        width, height = len(heights[0]), len(heights)
+        pacific_reached = set()
+        atlantic_reached = set()
 
-        def dfs(row, col, reachable):
-            reachable.add((row, col))
-            for r_mod, c_mod in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                rx, cx = row + r_mod, col + c_mod
-                if rx < 0 or cx < 0 or rx >= height or cx >= width:
-                    continue
-                if (rx, cx) in reachable:
-                    continue
-                if heights[row][col] > heights[rx][cx]:
-                    continue
-                
-                dfs(rx, cx, reachable)
+        def dfs(row, col, reached):
+            reached.add((row, col))
+            for row_mod, col_mod in ([-1, 0], [1, 0], [0, -1], [0, 1]):
+                new_row, new_col = row + row_mod, col + col_mod
 
-        for i in range(height):
-            dfs(i, 0, pacific_reachable)
-            dfs(i, width - 1, atlantic_reachable)
-        for i in range(width):
-            dfs(0, i, pacific_reachable)
-            dfs(height - 1, i, atlantic_reachable)
+                if new_row < 0 or new_col < 0 or new_row >= height or new_col >= width:
+                    continue
 
-        return list(pacific_reachable.intersection(atlantic_reachable))
+                if (new_row, new_col) in reached:
+                    continue
+
+                if heights[row][col] > heights[new_row][new_col]:
+                    continue
+
+                dfs(new_row, new_col, reached)
+
+        # start DFS search from coordinates that are touching one of the oceans
+        for y in range(height):
+            dfs(y, 0, pacific_reached)
+            dfs(y, width - 1, atlantic_reached)
+        for x in range(width):
+            dfs(0, x, pacific_reached)
+            dfs(height - 1, x, atlantic_reached)
+
+        return list(pacific_reached.intersection(atlantic_reached))
 
         
 solution = Solution()
