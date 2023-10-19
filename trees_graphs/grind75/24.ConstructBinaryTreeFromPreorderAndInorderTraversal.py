@@ -24,7 +24,7 @@ class Solution:
 
         for i in range(len(preorder)):
             root_map[inorder[i]] = i
-        
+
         def dfs(left, right):
             nonlocal preorder_index
 
@@ -32,18 +32,19 @@ class Solution:
                 return None
             
             new_node = TreeNode(preorder[preorder_index])
-            
+
             preorder_index += 1
 
             new_node.left = dfs(left, root_map[new_node.val] - 1)
-            new_node.right = dfs(root_map[new_node.val] + 1, right)
+            new_node.right = dfs(root_map[new_node.val] - 1, right)
             return new_node
-        
+
         return dfs(0, len(inorder) - 1)
 
 
 
 solution = Solution()
+answer = solution.buildTree([3,9,20,15,7], [9,3,15,20,7])
 answer = solution.buildTree([1,2], [1,2])
 answer = solution.buildTree([1,2], [2,1])
 answer = solution.buildTree([3,9,1,2,20,15,7], [1,9,2,3,15,20,7])

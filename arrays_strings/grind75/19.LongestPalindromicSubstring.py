@@ -47,8 +47,8 @@ class Solution:
 
         
 solution = Solution()
+answer = solution.longestPalindrome("racecar")
+answer = solution.longestPalindrome2("babad")
 answer = solution.longestPalindrome("aaaaa")
 answer = solution.longestPalindrome("cbbd")
-answer = solution.longestPalindrome2("babad")
-answer = solution.longestPalindrome("racecar")
 print(answer)
