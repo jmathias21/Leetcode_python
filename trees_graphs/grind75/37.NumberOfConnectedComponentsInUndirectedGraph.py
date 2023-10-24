@@ -42,8 +42,6 @@ class Solution:
 
         return len(roots)
 
-
-
         
 solution = Solution()
 answer = solution.countComponents(5, [[0,1],[1,2],[3,4]])
