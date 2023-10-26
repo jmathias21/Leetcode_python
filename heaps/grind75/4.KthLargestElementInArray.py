@@ -16,7 +16,7 @@ class Solution:
             heapq.heappop(nums)
         return heapq.heappop(nums) * -1
 
-    # Runtime Complexity: O(n * m)
+    # Runtime Complexity: O(n + m)
     # Space Complexity: O()
     # Time: Not timed
     def findKthLargestUsingCountingSort(self, nums: List[int], k: int) -> int:
