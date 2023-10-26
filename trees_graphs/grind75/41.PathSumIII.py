@@ -11,8 +11,8 @@ class TreeNode:
 # Tags: Prefix sum, DFS
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
     # Time: 12:00
     #
     # Use prefix sum hash map that gets passed alone recursively. Check to see if current sum - target is in map.
