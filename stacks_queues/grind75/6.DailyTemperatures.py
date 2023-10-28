@@ -9,7 +9,7 @@ class Solution:
     # Time: Not timed
     #
     # Loop through temperatures, adding each temperature index to a stack at each step. If the current day's temp
-    # is heigher than the temp on top of the stack, pop it off the stack and add the difference in days to our
+    # is higher than the temp on top of the stack, pop it off the stack and add the difference in days to our
     # answer array. Continue popping off the stack for the current day until the current day's temp is smaller or
     # equal to the top of the stack, and move onto the next day
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:

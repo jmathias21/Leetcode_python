@@ -15,10 +15,10 @@ class Solution:
         if n == 1:
             return [0]
 
-        adj = defaultdict(list)
+        adj = defaultdict(set)
         for start, end in edges:
-            adj[start].append(end)
-            adj[end].append(start)
+            adj[start].add(end)
+            adj[end].add(start)
 
         # find our leaves (nodes with only one connection)
         leaves = deque()
@@ -52,6 +52,7 @@ class Solution:
 
         
 solution = Solution()
+answer = solution.findMinHeightTrees(4, [[1,0],[1,2],[1,3]])
 answer = solution.findMinHeightTrees(7, [[3,0],[3,1],[3,2],[3,4],[5,4],[5,6]])
 answer = solution.findMinHeightTrees(6, [[3,0],[3,1],[3,2],[3,4],[5,4]])
 print(answer)
