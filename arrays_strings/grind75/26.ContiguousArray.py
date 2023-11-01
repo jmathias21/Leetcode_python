@@ -10,7 +10,7 @@ class Solution:
     #
     # Use hash map to store the current 0/1 count and corresponding index. At each index, if a
     # hash map item already exists for that count, we can calculate the max length at the index
-    # by subtracting the current index from the indx stored in the hash map
+    # by subtracting the current index from the index stored in the hash map
     def findMaxLength(self, nums: List[int]) -> int:
         max_length = 0
         map = {0: -1}

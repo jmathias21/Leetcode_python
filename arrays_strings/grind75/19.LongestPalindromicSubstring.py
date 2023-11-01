@@ -1,7 +1,7 @@
 from typing import List
 
 # https://leetcode.com/problems/longest-palindromic-substring
-# Tags: Palindromes
+# Tags: Stack
 class Solution:
 
     # Runtime Complexity: O(n^2)

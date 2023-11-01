@@ -5,8 +5,8 @@ from typing import List
 # Tags: Tuples, Anagrams
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n * k * logk)
+    # Space Complexity: O(n * k)
     # Time: Not timed
     #
     # For each string, sort the chars and append the string to the sorted key. e.g.

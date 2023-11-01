@@ -22,15 +22,19 @@ class Solution:
 
         seen = set()
 
-        def dfs(node):
-            if node in seen: return
+        def dfs(node, parent):
+            if node in seen: return True
 
             seen.add(node)
 
             for neighbor in adj[node]:
-                dfs(neighbor)
+                if neighbor != parent and dfs(neighbor, node):
+                    return True
+                
+            return False
         
-        dfs(0)
+        if dfs(0, None):
+            return False
         return len(seen) == n
 
     # Runtime Complexity: O(n * a(n))

@@ -4,8 +4,8 @@ from typing import List
 # Tags: Backtracking, DFS, recursion
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n * 2 ^ n)
+    # Space Complexity: O(n)
     # Time: 55:00
     #
     # Uses DFS backtracking with recursion to generate a decision tree. At each node,

@@ -22,14 +22,14 @@ class Solution:
 
         # if number is only descending digits, the next permutation is the reverse of it
         if left_swap == -1:
-            nums.sort()
+            nums.reverse()
             return
         
         # all numbers to the right of the number we want to swap are monotonic decreasing.
         # Since we want the next permutation, we need to sort these numbers ascending
         # [5,2,1,3,4]
         subset = nums[i:]
-        subset.sort()
+        subset.reverse()
         nums[i:] = subset
 
         # find the next highest number to the right

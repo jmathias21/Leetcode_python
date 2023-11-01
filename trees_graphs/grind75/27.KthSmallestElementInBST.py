@@ -42,6 +42,5 @@ class Solution:
 
         
 solution = Solution()
-answer = solution.kthSmallestUsingIterativeInorderDFS(TreeNode(5, TreeNode(3, TreeNode(1, TreeNode(0), TreeNode(2)), TreeNode(4)), TreeNode(6)), 4)
-answer = solution.kthSmallestUsingIterativeInorderDFS(TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4)))
+answer = solution.kthSmallestUsingRecursiveInorderDFS(TreeNode(5, TreeNode(3, TreeNode(1, TreeNode(0), TreeNode(2)), TreeNode(4)), TreeNode(6)), 4)
 print(answer)

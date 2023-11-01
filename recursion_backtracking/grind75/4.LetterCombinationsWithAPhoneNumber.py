@@ -8,7 +8,7 @@ class Solution:
     # Space Complexity: O()
     # Time: 18:00
     #
-    # Use backtracking to recurse through every possible permutation of letters for each digit.
+    # Use backtracking to recurse through every possible combination of letters for each digit.
     # Instead of concatenating strings throughout, we use an array to track letter combinations,
     # and we join them at the very end
     def letterCombinations(self, digits: str) -> List[str]:

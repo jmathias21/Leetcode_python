@@ -6,7 +6,7 @@ class ListNode:
         self.next = next
 
 # https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-# Tags: Two Pointers
+# Tags: Two Pointers, Sliding Window
 class Solution:
 
     # Runtime Complexity: O(n)

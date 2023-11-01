@@ -5,8 +5,8 @@ from typing import List
 # Tags: Hash map
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n ^ 2)
+    # Space Complexity: O(n)
     # Time: 27:00
     #
     # Use row, column, and sub-box dictionaries to store how many times we see each number in each
