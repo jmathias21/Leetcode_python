@@ -2,8 +2,8 @@
 # Tags: Recursion
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
     # Time: 42:00
     def calculate(self, s: str) -> int:
         s = s.replace(" ", "") + "+"
