@@ -15,7 +15,7 @@ class Solution:
     # Space Complexity: O(n)
     # Time: 12:00
     #
-    # Use prefix sum hash map that gets passed alone recursively. Check to see if current sum - target is in map.
+    # Use prefix sum hash map that gets passed along recursively. Check to see if current sum - target is in map.
     # If it is, add to our total
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
         total = 0

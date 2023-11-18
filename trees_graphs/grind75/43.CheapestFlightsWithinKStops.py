@@ -101,11 +101,11 @@ class Solution:
     
         
 solution = Solution()
-answer = solution.findCheapestPriceUsingDjikstras(5, [[0,1,4],[0,2,2],[1,2,3],[2,1,1],[1,3,2],[2,3,4],[2,4,5],[1,4,3],[4,3,1]], 0, 3, 2)
-answer = solution.findCheapestPriceUsingDjikstras(4, [[0,1,100],[1,2,100],[2,0,-300],[2,3,500]], 0, 3, 3)
-answer = solution.findCheapestPriceUsingDjikstras(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 1)
-answer = solution.findCheapestPriceUsingDjikstras(5, [[0,1,1],[0,2,5],[1,2,1],[2,3,1],[3,4,1]], 0, 4, 2)
-answer = solution.findCheapestPriceUsingDjikstras(2, [[1,0,5]], 0, 1, 1)
-answer = solution.findCheapestPriceUsingDjikstras(5, [[4,1,1],[1,2,3],[0,3,2],[0,4,10],[3,1,1],[1,4,3]], 2, 1, 1)
-answer = solution.findCheapestPriceUsingDjikstras(4, [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], 0, 3, 4)
+# answer = solution.findCheapestPriceUsingDjikstras(5, [[0,1,4],[0,2,2],[1,2,3],[2,1,1],[1,3,2],[2,3,4],[2,4,5],[1,4,3],[4,3,1]], 0, 3, 2)
+# answer = solution.findCheapestPriceUsingDjikstras(4, [[0,1,100],[1,2,100],[2,0,-300],[2,3,500]], 0, 3, 3)
+# answer = solution.findCheapestPriceUsingDjikstras(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 1)
+# answer = solution.findCheapestPriceUsingDjikstras(5, [[0,1,1],[0,2,5],[1,2,1],[2,3,1],[3,4,1]], 0, 4, 2)
+# answer = solution.findCheapestPriceUsingDjikstras(2, [[1,0,5]], 0, 1, 1)
+# answer = solution.findCheapestPriceUsingDjikstras(5, [[4,1,1],[1,2,3],[0,3,2],[0,4,10],[3,1,1],[1,4,3]], 2, 1, 1)
+answer = solution.findCheapestPriceUsingBellmanFord(4, [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], 0, 3, 4)
 print(answer)

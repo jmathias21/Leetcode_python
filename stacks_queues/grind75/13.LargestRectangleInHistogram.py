@@ -5,8 +5,8 @@ from typing import List
 # Tags: Stack
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(n)
+    # Space Complexity: O(n)
     # Time: Not timed
     def largestRectangleArea(self, heights: List[int]) -> int:
         max_area = 0

@@ -28,5 +28,6 @@ class Solution:
         
 solution = Solution()
 answer = solution.canJump([3,2,1,0,4])
+answer = solution.canJump([2,3,1,1,4])
 answer = solution.canJump([3,5,7,1,1,0,0,0,0,1])
 print(answer)

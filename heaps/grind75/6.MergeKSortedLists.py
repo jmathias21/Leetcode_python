@@ -7,7 +7,7 @@ class ListNode:
         self.next = next
 
 # https://leetcode.com/problems/merge-k-sorted-lists/
-# Tags: 
+# Tags: Heap
 class Solution:
 
     # Runtime Complexity: O(n log k)

@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 from typing import List
 
 # https://leetcode.com/problems/word-ladder/
-# Tags: BFS, Graph
+# Tags: BFS, Graph, Hash Map
 class Solution:
 
     # Runtime Complexity: O(M^2 * N) where M is the max length of each word, and N is the wordList
