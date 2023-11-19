@@ -24,5 +24,6 @@ class Solution:
         return max_area
         
 solution = Solution()
+answer = solution.largestRectangleArea([2,4])
 answer = solution.largestRectangleArea([2,1,5,6,2,3])
 print(answer)
