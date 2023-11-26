@@ -9,8 +9,8 @@ class TrieNode:
 # Tags: Prefix Tree, Trie, DFS, Backtracking
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(M(4⋅3^L−1))
+    # Space Complexity: O(N)
     # Time: 30:00
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         output = set()
