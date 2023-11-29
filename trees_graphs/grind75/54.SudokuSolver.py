@@ -2,11 +2,11 @@ from collections import defaultdict
 from typing import List
 
 # https://leetcode.com/problems/sudoku-solver/
-# Tags: 
+# Tags: Backtracking
 class Solution:
 
-    # Runtime Complexity: O()
-    # Space Complexity: O()
+    # Runtime Complexity: O(1)
+    # Space Complexity: O(1)
     # Time: Not timed
     def solveSudoku(self, board: List[List[str]]) -> None:
         size = 9
