@@ -1,4 +1,4 @@
-from collections import deque
+from collections import defaultdict, deque
 from typing import List, Optional
 
 class TreeNode:
@@ -15,7 +15,8 @@ class Solution:
     # Space Complexity: O(n)
     # Time: 20:00
     def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        columns = [[] for _ in range(202)]
+        columns = defaultdict(list)
+        smallest, largest = 100, -100
 
         queue = deque([(root, 0)])
 
@@ -25,12 +26,18 @@ class Solution:
             if node is None:
                 continue
 
-            columns[col + 100].append(node.val)
+            smallest = min(smallest, col)
+            largest = max(largest, col)
+            columns[col].append(node.val)
 
             queue.append((node.left, col - 1))
             queue.append((node.right, col + 1))
 
-        return [col for col in columns if col]
+        output = []
+        for col in range(smallest, largest + 1):
+            if col in columns:
+                output.append(columns[col])
+        return output
 
         
 solution = Solution()
