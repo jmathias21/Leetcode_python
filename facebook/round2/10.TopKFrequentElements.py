@@ -1,13 +1,13 @@
-from collections import Counter
 from typing import List
+from collections import Counter
 
-# https://leetcode.com/problems/top-k-frequent-elements/
-# Tags: Hash Map, Bucket Sort
+# 
+# Tags: 
 class Solution:
 
     # Runtime Complexity: O(n)
     # Space Complexity: O(n)
-    # Time: 12:00
+    # Time: 30:00
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         counts = Counter(nums)
         frequencies = [[] for _ in range(max(counts.values()) + 1)]
@@ -23,8 +23,8 @@ class Solution:
                 break
 
         return output
-
         
 solution = Solution()
+answer = solution.topKFrequent([-1,-1], 1)
 answer = solution.topKFrequent([1,1,1,2,2,3], 2)
 print(answer)
