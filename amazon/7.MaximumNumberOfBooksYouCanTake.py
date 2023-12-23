@@ -8,6 +8,7 @@ class Solution:
     # Space Complexity: O()
     # Time: started 11:31
     def maximumBooks(self, books: List[int]) -> int:
+        
 
         
 solution = Solution()
