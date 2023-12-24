@@ -35,5 +35,5 @@ class Solution:
 
         
 solution = Solution()
-answer = solution.combinationSum4([1,2], 3)
+answer = solution.combinationSum4([1,2,3], 4)
 print(answer)
