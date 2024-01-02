@@ -9,12 +9,10 @@ class Solution:
     # Space Complexity: O(n)
     def findKthLargest(self, nums: List[int], k: int) -> int:
         heap = []
-
         for num in nums:
-            heapq.heappush(heap, num)
-
+            heapq.heappush(num)
             if len(heap) > k:
-                heapq.heappop(heap)
+                heapq.heappop(num)
 
         return heap[0]
 
@@ -23,20 +21,19 @@ class Solution:
     # Space Complexity: O(n)
     def findKthLargest2(self, nums: List[int], k: int) -> int:
         minimum = min(nums)
-        counts = [0] * ((max(nums) - min(nums)) + 1)
-
-        # O(n)
+        maximum = max(nums)
+        counts = [0] * (abs(minimum) + maximum + 1)
         for num in nums:
-            counts[num - minimum ] += 1
+            counts[num + abs(minimum)] += 1
 
-        # O(m) where m is highest number
-        sorted_nums = []
-        for i, count in enumerate(counts):
-            sorted_nums.extend([(i + minimum)] * count)
+        i = abs(minimum) + maximum
+        while k > 0:
+            k -= counts[i]
+            i -= 1
+        return (i + 1) - abs(minimum)
 
-        return sorted_nums[-k]
 
         
 solution = Solution()
-answer = solution.findKthLargest([-5,-4,3,2,1,5,6,4], 2)
+answer = solution.findKthLargest2([-5,-4,3,2,1,5,6,4], 2)
 print(answer)
