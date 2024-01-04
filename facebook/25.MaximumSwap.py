@@ -31,8 +31,8 @@ class Solution:
 
         
 solution = Solution()
-answer = solution.maximumSwap(1993)
-answer = solution.maximumSwap(98368)
-answer = solution.maximumSwap(5)
-answer = solution.maximumSwap(12)
+answer = solution.maximumSwap(1993) # 9913
+answer = solution.maximumSwap(98368) # 98863
+answer = solution.maximumSwap(5) # 5
+answer = solution.maximumSwap(12) # 21
 print(answer)
