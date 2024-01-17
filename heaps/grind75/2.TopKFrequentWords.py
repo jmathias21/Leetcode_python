@@ -2,8 +2,6 @@ from collections import Counter, defaultdict
 from heapq import heapify, heappop
 from typing import List
 
-from sortedcontainers import SortedDict
-
 # https://leetcode.com/problems/top-k-frequent-words
 # Tags: Max Heap
 class Solution:

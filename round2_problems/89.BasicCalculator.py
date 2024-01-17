@@ -36,19 +36,6 @@ class Solution:
             return total
                     
         return rec()
-    
-    def calculate(self, s: str) -> int:
-        s = s.replace(' ', '') + "+"
-        str = deque(s)
-
-        total = 0
-        curr_num = 0
-        operator = "+"
-
-        while str:
-            char = str.popleft()
-
-            
 
         
 solution = Solution()
