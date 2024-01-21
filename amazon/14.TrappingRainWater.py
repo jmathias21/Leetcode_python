@@ -21,6 +21,7 @@ class Solution:
                 distance = i - stack[-1] - 1
                 bounded_height = min(height[stack[-1]], bar) - height[top]
                 trapped += distance * bounded_height
+            stack.append(i)
 
         return trapped  
 
