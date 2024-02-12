@@ -13,7 +13,7 @@ class Solution:
         longest = 0
 
         for i, char in enumerate(s):
-            if char == "(":
+            if char == '(':
                 stack.append(i)
             else:
                 stack.pop()
@@ -26,7 +26,9 @@ class Solution:
 
         
 solution = Solution()
+answer = solution.longestValidParentheses(")()())")
 answer = solution.longestValidParentheses("()))()()") # 4
+# 0, 
 answer = solution.longestValidParentheses("()))((()))") # 6
 answer = solution.longestValidParentheses("(())()(()((") # 6
 answer = solution.longestValidParentheses("))))((()((") # 2

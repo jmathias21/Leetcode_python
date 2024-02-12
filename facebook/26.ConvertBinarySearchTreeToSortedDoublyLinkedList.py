@@ -10,10 +10,39 @@ class Node:
 # Tags: 
 class Solution:
 
+    def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
+        if not root:
+            return None
+
+        first = None
+        prev = None
+        def dfs(node):
+            if node is None:
+                return
+
+            dfs(node.left)
+
+            nonlocal first, prev
+            if not first:
+                first = node
+            if prev:
+                node.left = prev
+                prev.right = node
+            prev = node
+
+            dfs(node.right)
+
+            return node
+        
+        dfs(root)
+        first.left = prev
+        prev.right = first
+        return first
+
     # Runtime Complexity: O()
     # Space Complexity: O()
     # Time: Not timed
-    def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
+    def treeToDoublyList2(self, root: 'Optional[Node]') -> 'Optional[Node]':
         if not root:
             return None
 

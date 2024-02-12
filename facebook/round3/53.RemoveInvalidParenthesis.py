@@ -47,6 +47,6 @@ class Solution:
 
         
 solution = Solution()
-answer = solution.removeInvalidParentheses("(((()")
-# answer = solution.removeInvalidParentheses("()())()")
+answer = solution.removeInvalidParentheses("(a)())()")
+answer = solution.removeInvalidParentheses("()())()")
 print(answer)
